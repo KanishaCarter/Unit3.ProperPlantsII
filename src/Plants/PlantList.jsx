@@ -5,7 +5,6 @@ import AddToCart from '../Cart/AddToCart';
 
 export default function PlantList() {
     const [plant , setPlant] = useState(null);
-    const [cartArray, updateCart] = useState({});
 
     return (
         <div className="catalogue-container">
@@ -15,11 +14,12 @@ export default function PlantList() {
                 return(
                     <li key={plant.id}>
                         <p>{plant.name}</p>
-                        <img>{plant.img}</img>
+                        <img>{plant.image}</img>
                         <button onClick={()=> setPlant(plant)}>AddToCart</button>
-                        <AddToCart plant={plant} />
+                        <AddToCart id={plant.id} name={plant.name} image={plant.image} />
                     </li>
                 )})}
+            <AddToCart />
         </div>
     )
 }

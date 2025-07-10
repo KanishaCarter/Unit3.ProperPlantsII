@@ -1,6 +1,13 @@
 import { useState } from 'react';
-import PlantList from 'PlantList'
+import PlantList from './Plants/PlantList';
+
 
 export default function App() {
-  return <></>;
+  const [count, setCount] = useState();
+
+  return (
+  <>
+  <PlantList />
+  </>
+  )
 }

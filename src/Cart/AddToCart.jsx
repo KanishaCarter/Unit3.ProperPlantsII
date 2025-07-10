@@ -1,20 +1,16 @@
 import { useState } from 'react';
-import Cart from './Cart';
-import IncreaseQty from './IncreaseQty';
 import DecreaseQty from './DecreaseQty';
+import IncreaseQty from './IncreaseQty';
 
-
-export default function AddToCart({ plant }) {
+export default function AddToCart({id, name, image}) {
     const [count, setCount] = useState(0);
-    const [selectedPlants, setSelectedPlants] = useState([]);
-    selectedPlants.push(plant);
 
     return (
         <div>
-            <p>{plantId}: {plantName}</p>
+            <p>{id}: {name}</p>
             <p>Qty: {count}</p>
-            <button onClick={()=> IncreaseQty(count)}> + </button>
-            <button onClick={()=> DecreaseQty(count)}> - </button>
+            <button onClick={()=>IncreaseQty}> + </button>
+            <button onClick={()=>DecreaseQty}> - </button>
         </div>
     )
 }
