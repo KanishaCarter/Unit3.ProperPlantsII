@@ -1,7 +1,7 @@
 import './plants.css';
 import { PLANTS } from './data';
 import { useState } from 'react';
-import AddToCart from '../cart/AddToCart';
+import AddToCart from '../Cart/AddToCart';
 
 export default function PlantList() {
     const [plant , setPlant] = useState(null);
