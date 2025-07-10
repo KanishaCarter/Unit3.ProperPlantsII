@@ -15,7 +15,7 @@ export default function PlantList() {
                     <li key={plant.id}>
                         <p>{plant.name}</p>
                         <img>{plant.img}</img>
-                        <button onClick={()=> setPlant(plant.id)}>AddToCart</button>
+                        <button onClick={()=> setPlant(plant)}>AddToCart</button>
                         <AddToCart plantId={plant.id} plantName={plant.name} plantimg={plant.img} />
                     </li>
                 )})}
