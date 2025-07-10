@@ -4,8 +4,10 @@ import IncreaseQty from './IncreaseQty';
 import DecreaseQty from './DecreaseQty';
 
 
-export default function AddToCart({ plantid, plantName, plantImg }) {
+export default function AddToCart({ plant }) {
     const [count, setCount] = useState(0);
+    const [selectedPlants, setSelectedPlants] = useState([]);
+    selectedPlants.push(plant);
 
     return (
         <div>
