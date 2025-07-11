@@ -9,8 +9,9 @@ export default function AddToCart({id, name, image}) {
         <div>
             <p>{id}: {name}</p>
             <p>Qty: {count}</p>
-            <button onClick={()=>IncreaseQty}> + </button>
-            <button onClick={()=>DecreaseQty}> - </button>
+            <button onClick={() => setCount(count + 1)}> + </button>
+            <button onClick={() => setCount(count > 0 ? count - 1 : 0)}> - </button>
+
         </div>
     )
 }
