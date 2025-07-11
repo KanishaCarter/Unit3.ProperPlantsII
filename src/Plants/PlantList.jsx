@@ -19,7 +19,6 @@ export default function PlantList() {
                         <AddToCart id={plant.id} name={plant.name} image={plant.image} />
                     </li>
                 )})}
-            <AddToCart />
         </div>
     )
 }
