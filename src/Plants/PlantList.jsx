@@ -1,5 +1,5 @@
 import './plants.css';
-import { PLANTS } from './data';
+import PLANTS from './data';
 import { useState } from 'react';
 import AddToCart from '../Cart/AddToCart';
 
