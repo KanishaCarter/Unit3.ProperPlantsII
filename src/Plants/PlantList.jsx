@@ -14,7 +14,7 @@ export default function PlantList() {
                 return(
                     <li key={plant.id}>
                         <p>{plant.name}</p>
-                        <img>{plant.image}</img>
+                        <p>{plant.image}</p>
                         <button onClick={()=> setPlant(plant)}>AddToCart</button>
                         <AddToCart id={plant.id} name={plant.name} image={plant.image} />
                     </li>
