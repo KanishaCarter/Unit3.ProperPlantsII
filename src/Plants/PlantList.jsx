@@ -1,33 +1,28 @@
 import './plants.css';
 import PLANTS from './data';
 import { useState } from 'react';
-import AddToCart from '../Cart/AddToCart';
 
 export default function PlantList() {
-    const [plant , setPlant] = useState(null);
+    const [selectedPlant, setSelectedPlant] = useState(null);
 
-    return (
-        <div className="catalogue-container">
-            <h2>Plants Catalogue</h2>
-            <h3>Click "Add to Cart" to add a plant to your cart.</h3>
-            {PLANTS.map((plant) => {
-                return(
-                    <li key={plant.id}>
-                        <p>{plant.name}</p>
-                        <p>{plant.image}</p>
-                        <button onClick={()=> setPlant(plant)}>AddToCart</button>
-                        <AddToCart id={plant.id} name={plant.name} image={plant.image} />
-                    </li>
-                )})}
-        </div>
-    )
+    if (!selectedPlant) {
+        return (
+            <>
+            <div className="catalogue-container">
+                    <h2>Plants Catalogue</h2>
+                    <text>-Click "Add to Cart" to add a plant to your cart.</text><br></br>
+                    
+                    {PLANTS.map((plant) => {
+                        return (
+                            <div key={plant.id} className="plant-details">
+                                <h3>{plant.name}</h3>
+                                <p>{plant.image}</p>
+                                <button onClick={() => setSelectedPlant(plant)}>AddToCart</button>
+                            </div>
+                        )
+                    })}
+                </div>
+            </>
+        )
+    }
 }
-
-/**
-const PLANTS = [
-  {
-    id: 1,
-    image: "🌿",
-    name: "Fern",
-},
-*/

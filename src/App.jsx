@@ -1,13 +1,18 @@
-  import { useState } from 'react';
-  import PlantList from './Plants/PlantList';
+import { useState } from 'react';
+import PlantList from './Plants/PlantList';
 
 
-  export default function App() {
-    const [count, setCount] = useState();
+export default function App() {
+  const [count, setCount] = useState();
 
-    return (
+  return (
     <>
-    <PlantList />
+      <div>
+        <header>
+          <h1>Proper Plants</h1>
+        </header>
+      </div>
+      <PlantList />
     </>
-    )
-  }
+  )
+}

@@ -1,0 +1,21 @@
+header {
+    font-size: 30px;
+    text-align: center;
+}
+
+.catalogue-container {
+    display: inline-block;
+}
+
+.plant-details {
+    display: inline-block;
+    border: solid black 1px;
+    padding: 30px;
+    margin: 10px;
+    align-self: center;
+    text-align: center;
+}
+
+h2 {
+    font-size: 30px;
+}
